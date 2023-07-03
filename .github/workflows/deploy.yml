@@ -19,8 +19,7 @@ jobs:
           repository: ${{ secrets.REPO_NAME }}
       - name: 📀 Install dependencies. 📀
         run: |
-          pip install python-decouple pytz telethon
-          pip install --upgrade pip
+          pip install aiohttp python-decouple pyaesni https://github.com/1Danish-00/Telethon/archive/master.zip html_telegraph_poster requests
       - name: 🏃‍♂️ Run the UserClient. 🏃‍♂️
         run: |
-          python3 bot.py
+          python3 start.py
