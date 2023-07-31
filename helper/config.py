@@ -15,8 +15,8 @@
 from . import *
 
 try:
-    APP_ID = config("APP_ID", default=28888037 , cast=int)
-    API_HASH = config("API_HASH" , "9fbe164b5591df05fbd8577e3b1d6d21")
+    APP_ID = config("APP_ID", default=23322236 , cast=int)
+    API_HASH = config("API_HASH" , "e7cc5d762451079c046202fc1d926677")
     BOT_TOKEN = config("BOT_TOKEN" , "5994576721:AAE_6iKcCEnbCCnT4u9AezKOMxuVtW_MZgI")
     OWNER = config("OWNER_ID", default=1932612943, cast=int)
     LOG = config("LOG_CHANNEL", default=-1001821335229 , cast=int)
