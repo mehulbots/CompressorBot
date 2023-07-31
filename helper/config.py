@@ -17,8 +17,8 @@ from . import *
 try:
     APP_ID = config("APP_ID", default=28888037 , cast=int)
     API_HASH = config("API_HASH" , "9fbe164b5591df05fbd8577e3b1d6d21")
-    BOT_TOKEN = config("BOT_TOKEN" , "6026867531:AAHDOzar2A9kVZSnPRNYrhkxofQZFAzWPq8")
-    OWNER = config("OWNER_ID", default=5190902724, cast=int)
+    BOT_TOKEN = config("BOT_TOKEN" , "5994576721:AAE_6iKcCEnbCCnT4u9AezKOMxuVtW_MZgI")
+    OWNER = config("OWNER_ID", default=1932612943, cast=int)
     LOG = config("LOG_CHANNEL", default=-1001971871116 , cast=int)
 except Exception as e:
     LOGS.info("Environment vars Missing")
