@@ -14,46 +14,6 @@
 
 from .worker import *
 
-# This dictionary will store the list of users who have joined each channel
-joined_channels = {
-    -1001913863954: [],
-    -1001913863954: []
-}
-
-def user_joined_channel(channel_id, user_id):
-    if channel_id in joined_channels:
-        if user_id not in joined_channels[channel_id]:
-            joined_channels[channel_id].append(user_id)
-
-def check_user_can_use_bot(user_id):
-    return user_id in joined_channels["channel1"] and user_id in joined_channels["channel2"]
-
-# Assuming you receive some user input or command
-async def handle_user_interaction(event, command):
-    user_id = event.sender_id
-    channel_id = event.chat_id
-    user_joined_channel(channel_id, user_id)
-
-    if check_user_can_use_bot(user_id):
-        if command == "/start":
-            await start(event)
-        elif command == "/help":
-            await help(event)
-        elif command == "/ihelp":
-            await ihelp(event)
-        # Add more command handlers here as per your bot's requirements
-        else:
-            await event.reply("Invalid command.")
-    else:
-        await event.reply("Please join both channels to use the bot. \n @MEHULBOTS \n @hdkiej")
-
-# The rest of the code is provided but please ensure it is properly indented when used in the actual implementation.
-# Due to the cut-off nature of the messages, I can't guarantee the completeness of the code beyond this point.
-
-
-
-
-
 
 
 
@@ -97,7 +57,7 @@ async def start(event):
             [
                 Button.url("DEVELOPER", url="t.me/Patil_Mehul"),
             ],
-            [Button.url("OUR OFFICIAL BOT CHANNEL", data="https://t.me/mehulbots")],
+            [Button.url("OUR OFFICIAL BOT CHANNEL", url="https://t.me/mehulbots")],
         ],
     )
 
@@ -125,7 +85,7 @@ async def beck(event):
             [
                 Button.url("DEVELOPER", url="t.me/Patil_MEhul"),
             ],
-            [Button.url("OUR OFFICIAL BOT CHANNEL", data="https://t.me/mehulbots")],
+            [Button.url("OUR OFFICIAL BOT CHANNEL", url="https://t.me/mehulbots")],
         ],
     )
 
