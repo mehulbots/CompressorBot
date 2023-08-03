@@ -88,18 +88,19 @@ async def up(event):
     await event.reply(v + "\n" + p)
 
 
-async def start(event):
+async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
-    await event.reply(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS",
+    await event.edit(
+        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS \n\n Important note - `{ok.user.first_name}`\nTo use our BOT For free join our channel otherwise you will no be able to use it after some time.",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-
                 Button.url("DEVELOPER", url="t.me/Patil_Mehul"),
             ],
+            [Button.url("OUR OFFICIAL BOT CHANNEL", data="https://t.me/mehulbots")],
         ],
     )
+
 
 
 async def help(event):
