@@ -88,7 +88,7 @@ async def up(event):
     await event.reply(v + "\n" + p)
 
 
-async def beck(event):
+async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
         f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS \n\n Important note - `{ok.user.first_name}`\nTo use our BOT For free join our channel otherwise you will no be able to use it after some time.",
