@@ -17,7 +17,7 @@ from . import *
 try:
     APP_ID = config("APP_ID", default=23322236 , cast=int)
     API_HASH = config("API_HASH" , "e7cc5d762451079c046202fc1d926677")
-    BOT_TOKEN = config("BOT_TOKEN" , "5994576721:AAE_6iKcCEnbCCnT4u9AezKOMxuVtW_MZgI")
+    BOT_TOKEN = config("BOT_TOKEN" , "5994576721:AAGuRLuAgmiEinTN4Vm44JsCijIecvjWiwc")
     OWNER = config("OWNER_ID", default=1932612943, cast=int)
     LOG = config("LOG_CHANNEL", default=-1001821335229 , cast=int)
 except Exception as e:
