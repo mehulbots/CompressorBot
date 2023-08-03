@@ -123,11 +123,12 @@ async def beck(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-               
-                Button.url("DEVELOPER", url="t.me/Prime_Hritu"),
-            ],[Button.url("OUR OFFICIAL BOT CHANNEL", data="https://t.me/mehulbots")
+                Button.url("DEVELOPER", url="t.me/Patil_MEhul"),
+            ],
+            [Button.url("OUR OFFICIAL BOT CHANNEL", data="https://t.me/mehulbots")],
         ],
     )
+
 
 
 async def sencc(e):
