@@ -1,22 +1,18 @@
-#    This file is part of the CompressorBot distribution.
-#    Copyright (c) 2021 Danish_00
+# This file is part of the CompressorBot distribution.
+# Copyright (c) 2021 Danish_00
 #
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, version 3.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, version 3.
 #
-#    This program is distributed in the hope that it will be useful, but
-#    WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-#    General Public License for more details.
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
 #
-#    License can be found in < https://github.com/1Danish-00/CompressorBot/blob/main/License> .
+# License can be found in <https://github.com/1Danish-00/CompressorBot/blob/main/License>.
 
 from .worker import *
-
-
-
-
 
 # This dictionary will store the list of users who have joined each channel
 joined_channels = {
@@ -37,7 +33,7 @@ async def handle_user_interaction(event, command):
     user_id = event.sender_id
     channel_id = event.chat_id
     user_joined_channel(channel_id, user_id)
-    
+
     if check_user_can_use_bot(user_id):
         if command == "/start":
             await start(event)
@@ -50,6 +46,10 @@ async def handle_user_interaction(event, command):
             await event.reply("Invalid command.")
     else:
         await event.reply("Please join both channels to use the bot. \n @MEHULBOTS \n @hdkiej")
+
+# The rest of the code is provided but please ensure it is properly indented when used in the actual implementation.
+# Due to the cut-off nature of the messages, I can't guarantee the completeness of the code beyond this point.
+
 
 
 
@@ -104,27 +104,27 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options\n\n• Bot By @Private_Bots"
+        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options\n\n• Bot By @MEHULBOTS"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options\n\n• Bot By @Private_Bots",
+        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options\n\n• Bot By @MEHULBOTS",
         buttons=[Button.inline("BACK", data="beck")],
     )
-
+    
 
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @Private_Bots",
+        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @Private_Bots \n\n Important note - `{ok.user.first_name}`\nTo use our BOT For free join our channel otherwise you will no be able to use it after some time.",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
                
                 Button.url("DEVELOPER", url="t.me/Prime_Hritu"),
-            ],
+            ],[Button.url("OUR OFFICIAL BOT CHANNEL", data="https://t.me/mehulbots")
         ],
     )
 
