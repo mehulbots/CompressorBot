@@ -32,8 +32,9 @@ async def start(event):
         f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
+            [Button.url("MAIN CHANNEL", url="t.me/MEHULBOTS")],
             [
-
+               
                 Button.url("DEVELOPER", url="t.me/Patil_Mehul"),
             ],
         ],
@@ -59,6 +60,7 @@ async def beck(event):
         f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
+            [Button.url("MAIN CHANNEL", url="t.me/MEHULBOTS")],
             [
                
                 Button.url("DEVELOPER", url="t.me/Patil_Mehul"),
