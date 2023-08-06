@@ -1,40 +1,18 @@
-# This file is part of the CompressorBot distribution.
-# Copyright (c) 2021 Danish_00
+#    This file is part of the CompressorBot distribution.
+#    Copyright (c) 2021 Danish_00
 #
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, version 3.
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, version 3.
 #
-# This program is distributed in the hope that it will be useful, but
-# WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-# General Public License for more details.
+#    This program is distributed in the hope that it will be useful, but
+#    WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+#    General Public License for more details.
 #
-# License can be found in <https://github.com/1Danish-00/CompressorBot/blob/main/License>.
+#    License can be found in < https://github.com/1Danish-00/CompressorBot/blob/main/License> .
 
 from .worker import *
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 async def up(event):
@@ -50,16 +28,17 @@ async def up(event):
 
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
-    await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS \n\n Important note - `{ok.user.first_name}`\nTo use our BOT For free join our channel otherwise you will no be able to use it after some time.",
+    await event.reply(
+        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("DEVELOPER", url="t.me/Patil_MEhul"),
+
+                Button.url("DEVELOPER", url="t.me/Patil_Mehul"),
             ],
-            [Button.url("OUR OFFICIAL BOT CHANNEL", url="https://t.me/mehulbots")],
         ],
     )
+
 
 async def help(event):
     await event.reply(
@@ -72,18 +51,18 @@ async def ihelp(event):
         "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options\n\n• Bot By @MEHULBOTS",
         buttons=[Button.inline("BACK", data="beck")],
     )
-    
+
 
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS \n\n Important note - `{ok.user.first_name}`\nTo use our BOT For free join our channel otherwise you will no be able to use it after some time.",
+        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.\n\n• Bot By @MEHULBOTS",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("DEVELOPER", url="t.me/Patil_MEhul"),
+               
+                Button.url("DEVELOPER", url="t.me/Patil_Mehul"),
             ],
-            [Button.url("OUR OFFICIAL BOT CHANNEL", url="https://t.me/mehulbots")],
         ],
     )
 
